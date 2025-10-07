@@ -1,9 +1,6 @@
-// src/components/Skills.jsx
-import Marquee from "react-fast-marquee";
-import { FaLaptopCode } from "react-icons/fa";
 import ServiceCards from "./ServiceCards";
 
-const Skills = () => {
+const Service = () => {
   return (
     <section id="skill" className="py-12 sm:py-16 lg:py-20 bg-[#333333]">
       <div className="relative text-center">
@@ -22,4 +19,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Service;

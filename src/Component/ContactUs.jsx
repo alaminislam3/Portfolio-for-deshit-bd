@@ -9,8 +9,7 @@ import {
 } from "react-icons/fa";
 import { useRef } from "react";
 import Swal from "sweetalert2";
-// import { Link} from "react-router";
-// import { SiTwitter } from "react-icons/si";
+
 
 const ContactUs = () => {
   const form = useRef()

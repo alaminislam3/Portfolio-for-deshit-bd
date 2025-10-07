@@ -11,7 +11,7 @@ const Aboutme = () => {
       id="aboutme"
       className="bg-[#333333] py-12 sm:py-16 lg:py-24 px-6 sm:px-10 lg:px-[150px]"
     >
-      {/* Content */}
+      
       <div className="flex flex-col lg:flex-row items-start lg:justify-between gap-10 lg:gap-12">
         <div className="w-full">
           <p className="text-[#FFBD39]">About me</p>

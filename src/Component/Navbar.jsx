@@ -70,6 +70,16 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              to="Resume"
+              smooth={true}
+              duration={500}
+              className="cursor-pointer text-white"
+            >
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link
               to="project"
               smooth={true}
               duration={500}
@@ -78,7 +88,7 @@ const Navbar = () => {
               Projects
             </Link>
           </li>
-          
+
           <li>
             <Link
               to="blog"
@@ -89,7 +99,6 @@ const Navbar = () => {
               Blog
             </Link>
           </li>
-
 
           <li>
             <Link
@@ -110,8 +119,6 @@ const Navbar = () => {
               Resume
             </button>
           </a>
-          
-         
         </ul>
 
         {/* Mobile Menu Icon */}
@@ -128,7 +135,7 @@ const Navbar = () => {
           <ul className="absolute top-16 left-0 w-full bg-[#d4a381] flex flex-col items-center space-y-6 py-6 md:hidden transition-all duration-300">
             <li>
               <Link
-                to='#'
+                to="#"
                 smooth={true}
                 duration={500}
                 onClick={closeMenu}
@@ -170,11 +177,9 @@ const Navbar = () => {
                 Resume
               </Link>
             </li>
-           
-           
 
             <li>
-            <Link
+              <Link
                 to="project"
                 smooth={true}
                 duration={500}

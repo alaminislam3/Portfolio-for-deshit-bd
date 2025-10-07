@@ -2,20 +2,20 @@ import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Navbar from "./Component/Navbar";
 import HeroSection from "./Component/HeroSection";
-import Skills from "./Component/Skills";
 import Aboutme from "./Component/Aboutme";
-import Education from "./Component/Education";
-import Experience from "./Component/Exprience";
 import ProjectSection from "./Component/Project";
 import ContactUs from "./Component/ContactUs";
+import Service from "./Component/Service";
+import Resume from "./Component/Resume";
+
 
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.5,  // কম duration = fast scroll
-      easing: (t) => t, // linear easing
+      duration: 0.5,  
+      easing: (t) => t, 
       smooth: true,
-      lerp: 0.05, // lower lerp = faster response
+      lerp: 0.05, 
     });
 
     function raf(time) {
@@ -31,9 +31,8 @@ function App() {
       <Navbar />
       <HeroSection />
       <Aboutme />
-      <Skills />
-      <Education />
-      {/* <Experience /> */}
+      <Service></Service>
+      <Resume/>
       <ProjectSection />
       <ContactUs />
     </>
