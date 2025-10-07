@@ -32,7 +32,7 @@ const Aboutme = () => {
             great collaboration.
           </p>
          
-            <br />
+           
             <div className="flex gap-3 items-center">
             <p className="text-white">Follow me : </p>
               <a
