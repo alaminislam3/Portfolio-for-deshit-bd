@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 z-50 transition-colors duration-500 ${
-        isScrolled ? "bg-black shadow-md" : "bg-[#d9cabf]"
+        isScrolled ? "bg-black shadow-md" : "bg-[#333333]"
       }`}
     >
       <div className="flex items-center justify-between max-w-[1200px] mx-auto px-4 py-4">
@@ -106,7 +106,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn bg-[#FD6E0A] text-white px-4 py-2 rounded">
+            <button className="btn bg-[#FFBD39] text-white px-4 py-2 rounded">
               Resume
             </button>
           </a>

@@ -1,4 +1,3 @@
-import "./App.css";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 import Navbar from "./Component/Navbar";
