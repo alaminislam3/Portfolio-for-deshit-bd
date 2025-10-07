@@ -1,0 +1,23 @@
+.body{
+  font-family : 'Poppins', sans-serif;}
+
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
