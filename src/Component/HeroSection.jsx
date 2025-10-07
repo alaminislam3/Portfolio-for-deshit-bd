@@ -24,7 +24,7 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-5 flex gap-6">
-          <button className="btn btn-primary">Hire me</button>
+          <button className="btn btn-primary border-none">Hire me</button>
           <button className="btn bg-[#FFBD39] border-none">Download Cv</button>
           </div>
         </div>

@@ -30,8 +30,8 @@ function App() {
     <>
       <Navbar />
       <HeroSection />
-      <Skills />
       <Aboutme />
+      <Skills />
       <Education />
       {/* <Experience /> */}
       <ProjectSection />
