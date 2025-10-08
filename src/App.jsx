@@ -9,6 +9,8 @@ import Resume from "./Component/Resume";
 import Project from "./Component/Project";
 import Blog from "./Component/Blog";
 import Footer from "./Component/Footer";
+import ClientFeedback from "./Component/ClientFeedback";
+
 
 
 function App() {
@@ -36,9 +38,11 @@ function App() {
       <Service></Service>
       <Resume/>
       <Project/>
+      <ClientFeedback/>
       <Blog/>
       <ContactUs />
       <Footer/>
+      
     </>
   );
 }
