@@ -1,7 +1,3 @@
-import React from 'react'
-import EducationSection from './EducationSection'
-import ExprienceSection from './ExprienceSection'
-
 export default function Resume() {
   return (
     <div id='resume' className='bg-[#333333]'> 
@@ -17,8 +13,7 @@ export default function Resume() {
         <p className="text-[16px] text-white">Passionate MERN Stack Developer crafting scalable and user-friendly web solutions.</p>
       </div>  
       <h2 className='text-white text-center text-[32px] font-bold mt-2'>My Education</h2>
-      <EducationSection></EducationSection>
-      <ExprienceSection/>
+      
     </div>
   )
 }

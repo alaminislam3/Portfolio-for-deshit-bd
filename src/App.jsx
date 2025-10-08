@@ -10,6 +10,8 @@ import Project from "./Component/Project";
 import Blog from "./Component/Blog";
 import Footer from "./Component/Footer";
 import ClientFeedback from "./Component/ClientFeedback";
+import EducativeSection from "./Component/EducationSection"
+import ExprienceSection from "./Component/ExprienceSection"
 
 
 
@@ -37,6 +39,8 @@ function App() {
       <Aboutme />
       <Service></Service>
       <Resume/>
+      <EducativeSection/>
+      <ExprienceSection/>
       <Project/>
       <ClientFeedback/>
       <Blog/>

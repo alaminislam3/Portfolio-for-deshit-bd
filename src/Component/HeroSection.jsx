@@ -1,6 +1,3 @@
-// src/components/HeroSection.jsx
-import portImg from "../assets/portfolio dp-fotor-bg-remover-20250628183822.png";
-
 
 const HeroSection = () => {
   return (
@@ -32,7 +29,7 @@ const HeroSection = () => {
         {/* Image */}
         <div className="">
           <img
-            src={portImg}
+            src="https://i.ibb.co.com/m5LdWqsX/hero.png"
             alt="Alamin Islam dp"
             height={676}
             width={584}

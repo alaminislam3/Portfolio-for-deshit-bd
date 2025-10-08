@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import { Link,  animateScroll as scroll } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa"; // hamburger icons
 
 const Navbar = () => {
@@ -39,14 +39,15 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8">
           <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
+            <span
+              onClick={() => {
+                scroll.scrollToTop();
+                closeMenu();
+              }}
               className="cursor-pointer text-white"
             >
               Home
-            </Link>
+            </span>
           </li>
           <li>
             <Link
@@ -70,7 +71,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="Resume"
+              to="resume"
               smooth={true}
               duration={500}
               className="cursor-pointer text-white"
@@ -110,15 +111,6 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
-          <a
-            href="https://docs.google.com/document/d/1jZhinOQ_etiYA7yfQ6yyEWjNo8vC7K7smSboLFAzVlU/edit?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="btn bg-[#FFBD39] text-white px-4 py-2 rounded">
-              Resume
-            </button>
-          </a>
         </ul>
 
         {/* Mobile Menu Icon */}
