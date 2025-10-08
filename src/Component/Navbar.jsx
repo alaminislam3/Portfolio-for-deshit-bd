@@ -1,28 +1,29 @@
-// src/components/Navbar.jsx
 import { useEffect, useState } from "react";
-import { Link,  animateScroll as scroll } from "react-scroll";
-import { FaBars, FaTimes } from "react-icons/fa"; // hamburger icons
+import { Link, animateScroll as scroll } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // for mobile menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
+  const navItems = [
+    { name: "Home", to: "home" },
+    { name: "About", to: "aboutme" },
+    { name: "Service", to: "skill" },
+    { name: "Resume", to: "resume" },
+    { name: "Projects", to: "project" },
+    { name: "Blog", to: "blog" },
+    { name: "Contact", to: "contact" },
+  ];
 
   return (
     <nav
@@ -38,79 +39,32 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8">
-          <li>
-            <span
-              onClick={() => {
-                scroll.scrollToTop();
-                closeMenu();
-              }}
-              className="cursor-pointer text-white"
-            >
-              Home
-            </span>
-          </li>
-          <li>
-            <Link
-              to="aboutme"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="skill"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              Service
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="resume"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="project"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              Projects
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="blog"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              Blog
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              to="contact"
-              smooth={true}
-              duration={500}
-              className="cursor-pointer text-white"
-            >
-              Contact
-            </Link>
-          </li>
+          {navItems.map((item) =>
+            item.name === "Home" ? (
+              <li key={item.to}>
+                <span
+                  onClick={() => scroll.scrollToTop()}
+                  className="cursor-pointer text-white"
+                >
+                  Home
+                </span>
+              </li>
+            ) : (
+              <li key={item.to}>
+                <Link
+                  to={item.to}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80} // Navbar height consider
+                  activeClass="!text-[#FFBD39]"
+                  className="cursor-pointer text-white"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            )
+          )}
         </ul>
 
         {/* Mobile Menu Icon */}
@@ -125,62 +79,36 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <ul className="absolute top-16 left-0 w-full bg-[#d4a381] flex flex-col items-center space-y-6 py-6 md:hidden transition-all duration-300">
-            <li>
-              <Link
-                to="#"
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                className="cursor-pointer text-white"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                className="cursor-pointer text-black"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="service"
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                className="cursor-pointer text-black"
-              >
-                service
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="resume"
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                className="cursor-pointer text-black"
-              >
-                Resume
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="project"
-                smooth={true}
-                duration={500}
-                onClick={closeMenu}
-                className="cursor-pointer text-black"
-              >
-                Portfolio
-              </Link>
-            </li>
+            {navItems.map((item) =>
+              item.name === "Home" ? (
+                <li key={item.to}>
+                  <span
+                    onClick={() => {
+                      scroll.scrollToTop();
+                      closeMenu();
+                    }}
+                    className="cursor-pointer text-black"
+                  >
+                    Home
+                  </span>
+                </li>
+              ) : (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    offset={-80}
+                    activeClass="!text-[#FFBD39]"
+                    onClick={closeMenu}
+                    className="cursor-pointer text-black"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         )}
       </div>
