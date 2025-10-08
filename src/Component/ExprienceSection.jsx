@@ -21,7 +21,7 @@ export default function ExprienceSection() {
     ];
   
     return (
-      <section className="bg-[#333333] py-10">
+      <section className="bg-[#333333] py-10 px-6 sm:px-10 lg:px-[50px]">
         <h2 className="font-bold text-[30px] text-white text-center mb-8">
           My Experience
         </h2>
@@ -30,7 +30,7 @@ export default function ExprienceSection() {
           {experience.map((exp, index) => (
             <div
               key={index}
-              className=" rounded-xl p-6 w-full md:w-[30%] hover:scale-105 transition-transform duration-300 shadow-xl"
+              className=" rounded-xl p-6  hover:scale-105 transition-transform duration-300 shadow-xl"
             >
               {/* Year Badge */}
               <div className="inline-block bg-[#FFBD39] text-white px-3 py-1 rounded-full mb-4 font-semibold">

@@ -1,10 +1,10 @@
 
 const HeroSection = () => {
   return (
-    <header className="bg-[#333333] pt-10 pb-20">
-      <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-[40px] lg:px-[150px] gap-12">
+    <header className="bg-[#333333]">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-4 sm:px-6 lg:px-10 gap-6 mx-auto">
         {/* Text Content */}
-        <div className="max-w-xl text-center lg:text-left">
+        <div className=" text-center lg:text-left">
           <h4 className="text-[15px] lg:text-[20px] font-bold text-[#FFBD39]">
             Hello
           </h4>

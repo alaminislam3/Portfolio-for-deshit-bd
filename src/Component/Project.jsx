@@ -26,8 +26,8 @@ export default function Project() {
       : projects.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="project" className="py-16 bg-[#333333] text-white">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="project" className="py-16 bg-[#333333] text-white px-6 sm:px-10 lg:px-[50px]">
+      <div className=" mx-auto px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Our Portfolio</h2>
 

@@ -37,14 +37,14 @@ export default function ClientFeedback() {
   };
 
   return (
-    <div className="bg-[#2b2b2b] text-white py-16 px-4">
+    <div className="bg-[#2b2b2b] text-white py-16 px-6 sm:px-10 lg:px-[50px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-semibold mb-2">Our Client Feedback</h2>
         <div className="flex justify-center items-center mb-3">
           <div className="w-16 h-[2px] bg-yellow-400"></div>
           <div className="w-3 h-3 bg-white border-2 border-yellow-400 rounded-full -ml-2"></div>
         </div>
-        <p className="max-w-2xl mx-auto text-gray-300">
+        <p className=" mx-auto text-gray-300">
           Etiam suscipit ante at sem facilisis, id sagittis nunc aliquet.
           Vivamus sodales elementum pharetra. Cras dignissim justo eu accumsan
           vulputate.
@@ -52,7 +52,7 @@ export default function ClientFeedback() {
       </div>
 
       {/* Feedback Section */}
-      <div className="relative max-w-6xl mx-auto flex items-center justify-center gap-6">
+      <div className="relative  mx-auto flex items-center justify-center gap-3">
         {/* Left Arrow */}
         <button
           onClick={prevFeedback}
@@ -68,11 +68,11 @@ export default function ClientFeedback() {
         </button>
 
         {/* Feedback Cards */}
-        <div className="grid md:grid-cols-2 gap-6 w-full">
+        <div className="grid md:grid-cols-2 gap-3 px-4 sm:px-6 lg:px-8">
           {feedbacks.slice(startIndex, startIndex + 2).map((fb) => (
             <div
               key={fb.id}
-              className="bg-[#00796b] relative p-6 rounded-lg shadow-lg"
+              className="bg-[#00796b] relative p-3 rounded-lg shadow-lg px-6 sm:px-10 lg:px-[50px]"
             >
               <h3 className="text-lg font-bold capitalize">{fb.name}</h3>
               <p className="text-sm mb-2 text-gray-200">{fb.title}</p>

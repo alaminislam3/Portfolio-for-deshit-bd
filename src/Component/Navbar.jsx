@@ -31,7 +31,7 @@ const Navbar = () => {
         isScrolled ? "bg-black shadow-md" : "bg-[#333333]"
       }`}
     >
-      <div className="flex items-center justify-between max-w-[1200px] mx-auto px-4 py-4">
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         {/* Logo */}
         <div className="inline-block px-4 py-2">
           <p>CodeC</p>

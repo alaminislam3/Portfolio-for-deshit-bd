@@ -2,7 +2,7 @@ import ServiceCards from "./ServiceCards";
 
 const Service = () => {
   return (
-    <section id="skill" className="py-12 sm:py-16 lg:py-20 bg-[#333333]">
+    <section id="skill" className="py-4 sm:py-6 lg:py-8 px-6 sm:px-10 lg:px-[50px] bg-[#333333]">
       <div className="relative text-center">
         <h2 className="font-bold text-[30px] text-white mb-2">Our Service</h2>
 

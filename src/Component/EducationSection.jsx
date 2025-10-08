@@ -21,11 +21,11 @@ export default function EducationSection() {
     ];
   
     return (
-      <div className="flex flex-col md:flex-row justify-evenly items-center gap-6 py-4 bg-[#333333] text-white ">
+      <div className="flex flex-col md:flex-row justify-evenly items-center gap-6 py-4 bg-[#333333] text-white px-6 sm:px-10 lg:px-[50px]">
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className="bg-[#3333] rounded-xl p-6 w-full md:w-[30%] hover:scale-105 transition-transform duration-300 shadow-xl"
+            className="bg-[#3333] rounded-xl p-5  hover:scale-105 transition-transform duration-300 shadow-xl"
           >
             
             <div className="inline-block bg-[#FFBD39] text-white px-2 py-1 rounded-full mb-4 font-semibold">
