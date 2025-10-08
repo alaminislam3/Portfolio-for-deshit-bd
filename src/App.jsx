@@ -3,10 +3,10 @@ import Lenis from "@studio-freight/lenis";
 import Navbar from "./Component/Navbar";
 import HeroSection from "./Component/HeroSection";
 import Aboutme from "./Component/Aboutme";
-import ProjectSection from "./Component/Project";
 import ContactUs from "./Component/ContactUs";
 import Service from "./Component/Service";
 import Resume from "./Component/Resume";
+import Project from "./Component/Project";
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
       <Aboutme />
       <Service></Service>
       <Resume/>
-      <ProjectSection />
+      <Project/>
       <ContactUs />
     </>
   );

@@ -1,173 +1,85 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 
-const projects = [
-  {
-    title: "Looplate",
-    description:
-      "A MERN Stack-powered platform that connects Restaurants, Charities, and Users to reduce local food waste by enabling food donations and pickups in real-time.",
-    image: "https://i.ibb.co.com/kVJkCCg8/Screenshot-196.png",
-    live: "https://looplate.netlify.app/",
-    github: "https://github.com/alaminislam3/looplate-client",
-    languages: ["React", "Node.js", "MongoDB", "Express"],
-    features: [
-      "User role-based authentication",
-      "Food donation & pickup system",
-      "Real-time updates and dashboards",
-    ],
-  },
-  {
-    title: "Leaftrack",
-    description:
-      "LeafTrack is a modern web application designed to help plant enthusiasts manage and track their plants with ease.",
-    image: "https://i.ibb.co/prsJG5Vf/leaf-Track-ss-new.png",
-    live: "https://practice-firebase-auth-9e8cd.web.app",
-    github: "https://github.com/alaminislam3/LeafTrack",
-    languages: ["React", "Firebase", "Tailwind"],
-    features: [
-      "Plant management dashboard",
-      "Firebase authentication",
-      "User-friendly responsive UI",
-    ],
-  },
-  {
-    title: "Learnify",
-    description:
-      "A full-stack web application where users can read, post, and manage articles easily.",
-    image: "https://i.ibb.co/hJhrwdyB/learnify-ss.png",
-    live: "https://learnify-500d1.web.app",
-    github: "https://github.com/alaminislam3/Learnify",
-    languages: ["React", "Node.js", "MongoDB", "Express"],
-    features: [
-      "Article creation and management",
-      "User authentication & authorization",
-      "Modern responsive design",
-    ],
-  },
-];
+export default function Project() {
+  const categories = [
+    "All",
+    "Web Design",
+    "App Development",
+    "UI/UX",
+    "Graphic Design",
+  ];
 
-const Project = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const projects = [
+    { id: 1, category: "Web Design", img: "/p1.png" },
+    { id: 2, category: "Web Design", img: "/p2.png" },
+    { id: 3, category: "App Development", img: "/p3.png" },
+    { id: 4, category: "App Development", img: "/p4.png" },
+    { id: 5, category: "UI/UX", img: "/p5.png" },
+    { id: 6, category: "Graphic Design", img: "/p6.png" },
+  ];
+
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((item) => item.category === activeCategory);
 
   return (
-    <section
-      id="project"
-      className="bg-[#d9cabf] px-6 py-12 sm:px-10 lg:px-[150px] sm:py-16 lg:py-24"
-    >
-      <h2 className="text-5xl font-extrabold text-black text-center mb-12">
-        My Projects
-      </h2>
+    <section id="project" className="py-16 bg-[#333333] text-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">Our Portfolio</h2>
 
-      <div className="space-y-12">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="flex flex-col p-10 lg:flex-row items-center bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"
-          >
-            {/* Image */}
-            <div className="w-full lg:w-1/2">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full max-w-md rounded-lg shadow-md transform transition-transform duration-500 hover:scale-110 object-cover"
-              />
-            </div>
-
-            {/* Project Info */}
-            <div className="w-full lg:w-1/2 p-10 flex flex-col justify-between">
-              <div>
-                <h3 className="text-2xl font-semibold mb-2 text-black">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-gray-600">{project.description}</p>
-              </div>
-
-              {/* Buttons */}
-              <div className="mt-6 flex gap-4 flex-wrap justify-center lg:justify-start">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn bg-[#FD6E0A] text-white"
-                >
-                  Live Site
-                </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn bg-[#FD6E0A] text-white flex items-center gap-2"
-                >
-                  <FaGithub className="text-xl" /> GitHub
-                </a>
-                {/* Details Button */}
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="btn bg-[#FD6E0A] text-white"
-                >
-                  Details
-                </button>
-              </div>
-            </div>
+          <div className="relative w-full flex justify-center mb-2">
+            <div className="w-[120px] h-[2px] bg-[#FFBD39]"></div>
+            <div className="absolute top-1/2 -translate-y-1/2 bg-white border-[#FFBD39] w-3 h-3 rounded-full border-2"></div>
           </div>
-        ))}
-      </div>
 
-      {/* Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50">
-          <div className="bg-[#d9cabf] rounded-xl p-8 w-[600px] max-h-[90vh] overflow-y-auto shadow-lg relative text-black">
-            {/* Close Button */}
-            <button
-              className="absolute top-3 right-3 text-red-600 font-bold text-xl"
-              onClick={() => setSelectedProject(null)}
-            >
-              ✕
-            </button>
-
-            {/* Modal Content */}
-            <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
-            
-
-            <p className="mb-4">{selectedProject.description}</p>
-
-            <p className="mb-2">
-              <strong>Languages & Tools:</strong>{" "}
-              {selectedProject.languages?.join(", ")}
-            </p>
-
-            <div className="mb-4">
-              <strong>Key Features:</strong>
-              <ul className="list-disc list-inside mt-2 space-y-1">
-                {selectedProject.features?.map((feature, i) => (
-                  <li key={i}>{feature}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex gap-4 mt-4">
-              <a
-                href={selectedProject.live}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn bg-[#FD6E0A] text-white"
-              >
-                Live Site
-              </a>
-              <a
-                href={selectedProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn bg-[#FD6E0A] text-white flex items-center gap-2"
-              >
-                <FaGithub /> GitHub
-              </a>
-            </div>
-          </div>
+          <p className="text-gray-300">Explore some of my recent work</p>
         </div>
-      )}
+
+        <div className="flex justify-center gap-4 mb-10 flex-wrap">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-2 rounded-full border transition-all duration-300 ${
+                activeCategory === cat
+                  ? "bg-[#FFBD39] text-black font-semibold"
+                  : "border-gray-500 text-white hover:bg-[#FFBD39] hover:text-black"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <div
+          className={`grid gap-6 ${
+            activeCategory === "All"
+              ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+              : "grid-cols-1 sm:grid-cols-2"
+          }`}
+        >
+          {filteredProjects.map((project) => (
+            <div
+              key={project.id}
+              className="relative overflow-hidden rounded-lg group"
+            >
+              <img
+                src={project.img}
+                alt={project.category}
+                className="w-full h-auto max-w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+
+              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex justify-center items-center text-[#FFBD39] font-semibold">
+                {project.category}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
-};
-
-export default Project;
+}
