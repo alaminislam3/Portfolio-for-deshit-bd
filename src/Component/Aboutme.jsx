@@ -9,7 +9,7 @@ const Aboutme = () => {
   return (
     <div
       id="aboutme"
-      className="bg-[#333333] py-12 sm:py-16 lg:py-24 px-6 sm:px-10 lg:px-[50px]"
+      className="bg-[#333333] py-12 lg:py-20 px-6 sm:px-10 lg:px-[50px]"
     >
       
       <div className="flex flex-col lg:flex-row items-start lg:justify-between gap-10 lg:gap-12">

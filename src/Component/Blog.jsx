@@ -34,13 +34,13 @@ export default function Blog() {
       id="blog"
       className="bg-[#333333] text-white py-16 px-6 sm:px-10 lg:px-12"
     >
-      {/* Section Header */}
+      {/* Header Section */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3">
           Our Latest Blog
         </h2>
 
-        {/* Decorative underline */}
+        {/* Decorative Line */}
         <div className="relative flex justify-center mb-3">
           <div className="w-[120px] h-[2px] bg-[#FFBD39]"></div>
           <div className="absolute top-1/2 -translate-y-1/2 bg-white border-[#FFBD39] w-3 h-3 rounded-full border-2"></div>
@@ -51,19 +51,19 @@ export default function Blog() {
         </p>
       </div>
 
-      {/* Blog Cards */}
-      <div className=" mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Blog Cards Grid */}
+      <div className="mx-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 bg-[#2c2c2c]"
+            className="rounded-xl overflow-hidden shadow-md bg-[#2c2c2c] hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
           >
             {/* Image Section */}
-            <div className="relative">
+            <div className="relative ">
               <img
                 src={blog.img}
                 alt={blog.title}
-                className="w-full h-56 sm:h-64 md:h-72 lg:h-60 xl:h-72 object-cover"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
               <div className="absolute top-4 left-4 bg-[#FFBD39] text-black text-center rounded-md px-3 py-1 shadow-md">
                 <p className="text-lg font-bold leading-none">
@@ -73,15 +73,15 @@ export default function Blog() {
               </div>
             </div>
 
-            {/* Content Section */}
-            <div className="p-5 sm:p-6 lg:p-8">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 leading-snug">
+            {/* Text Section */}
+            <div className="p-3 sm:p-7">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 ">
                 {blog.title}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-300 mb-2">
+              <p className="text-xs sm:text-sm text-gray-400 mb-2">
                 {blog.info}
               </p>
-              <p className="text-gray-400 mb-4 text-sm sm:text-base">
+              <p className="text-gray-300 mb-4 text-sm sm:text-base leading-relaxed">
                 {blog.desc}
               </p>
 

@@ -1,10 +1,9 @@
-
 const HeroSection = () => {
   return (
     <header className="bg-[#333333]">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-4 sm:px-6 lg:px-10 gap-6 mx-auto">
         {/* Text Content */}
-        <div className=" text-center lg:text-left">
+        <div className="text-center lg:text-left">
           <h4 className="text-[15px] lg:text-[20px] font-bold text-[#FFBD39]">
             Hello
           </h4>
@@ -29,7 +28,7 @@ const HeroSection = () => {
         {/* Image */}
         <div className="">
           <img
-            src="https://i.ibb.co.com/m5LdWqsX/hero.png"
+            src="./hero.png"
             alt="Alamin Islam dp"
             height={676}
             width={584}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <section id="contact" className="bg-[#333333] text-white py-4 sm:py-6 lg:py-8 px-4">
+    <section id="contact" className="bg-[#333333] text-white py-4 sm:py-6 lg:py-12  px-4">
       <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl font-bold mb-2">Contact Us</h2>

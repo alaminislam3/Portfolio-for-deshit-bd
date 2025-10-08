@@ -1,6 +1,6 @@
 export default function Resume() {
   return (
-    <div id='resume' className='bg-[#333333] py-4 sm:py-6 lg:py-8 px-6 sm:px-10 lg:px-[50px] mx-auto'> 
+    <div id='resume' className='bg-[#333333]  px-6 sm:px-10 lg:px-12 mx-auto'> 
       <div className="relative text-center">
         <h2 className="font-bold text-[30px] text-white mb-2">Our Resume</h2>
 
