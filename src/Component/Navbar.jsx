@@ -78,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {menuOpen && (
-          <ul className="absolute top-16 left-0 w-full bg-[#d4a381] flex flex-col items-center space-y-6 py-6 md:hidden transition-all duration-300">
+          <ul className="absolute top-16 left-0 w-full bg-[#333333] flex flex-col items-center space-y-6 py-6 md:hidden transition-all duration-300">
             {navItems.map((item) =>
               item.name === "Home" ? (
                 <li key={item.to}>
@@ -87,7 +87,7 @@ const Navbar = () => {
                       scroll.scrollToTop();
                       closeMenu();
                     }}
-                    className="cursor-pointer text-black"
+                    className="cursor-pointer text-white"
                   >
                     Home
                   </span>
@@ -102,7 +102,7 @@ const Navbar = () => {
                     offset={-80}
                     activeClass="!text-[#FFBD39]"
                     onClick={closeMenu}
-                    className="cursor-pointer text-black"
+                    className="cursor-pointer text-white"
                   >
                     {item.name}
                   </Link>
