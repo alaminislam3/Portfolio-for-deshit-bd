@@ -8,6 +8,7 @@ import Service from "./Component/Service";
 import Resume from "./Component/Resume";
 import Project from "./Component/Project";
 import Blog from "./Component/Blog";
+import Footer from "./Component/Footer";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <Project/>
       <Blog/>
       <ContactUs />
+      <Footer/>
     </>
   );
 }
