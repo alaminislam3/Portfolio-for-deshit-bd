@@ -7,6 +7,7 @@ import ContactUs from "./Component/ContactUs";
 import Service from "./Component/Service";
 import Resume from "./Component/Resume";
 import Project from "./Component/Project";
+import Blog from "./Component/Blog";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
       <Service></Service>
       <Resume/>
       <Project/>
+      <Blog/>
       <ContactUs />
     </>
   );

@@ -31,7 +31,7 @@ export default function Project() {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Our Portfolio</h2>
 
-          <div className="relative w-full flex justify-center mb-2">
+            <div className="relative w-full flex justify-center mb-2">
             <div className="w-[120px] h-[2px] bg-[#FFBD39]"></div>
             <div className="absolute top-1/2 -translate-y-1/2 bg-white border-[#FFBD39] w-3 h-3 rounded-full border-2"></div>
           </div>
