@@ -40,9 +40,9 @@ export default function ClientFeedback() {
     <div className="bg-[#2b2b2b] text-white py-16 px-6 sm:px-10 lg:px-[50px]">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-semibold mb-2">Our Client Feedback</h2>
-        <div className="flex justify-center items-center mb-3">
-          <div className="w-16 h-[2px] bg-yellow-400"></div>
-          <div className="w-3 h-3 bg-white border-2 border-yellow-400 rounded-full -ml-2"></div>
+        <div className="relative flex justify-center mb-3">
+          <div className="w-[120px] h-[2px] bg-[#FFBD39]"></div>
+          <div className="absolute top-1/2 -translate-y-1/2 bg-white border-[#FFBD39] w-3 h-3 rounded-full border-2"></div>
         </div>
         <p className=" mx-auto text-gray-300">
           Etiam suscipit ante at sem facilisis, id sagittis nunc aliquet.
